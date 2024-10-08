@@ -21,12 +21,12 @@ jobs:
 
       - name: Install dependencies
         run: flutter pub get
-        working-directory: ../
+        
 
       # Ensamblar el proyecto Flutter en un ejecutable
       - name: Flutter Build
         run: flutter build web
-        working-directory: ../
+        
         
       # Construir la imagen Docker
       - name: Docker Build
