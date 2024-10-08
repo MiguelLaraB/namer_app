@@ -1,11 +1,12 @@
 # Usa una imagen de Flutter
 FROM cirrusci/flutter:stable AS build
 
+# Crea el directorio de trabajo
+RUN mkdir /app
+WORKDIR /app
+
 # Copia tu código Flutter al contenedor
 COPY . .
-
-# Establece el directorio de trabajo
-WORKDIR /app
 
 # Ejecuta la compilación en modo web
 RUN flutter build web --release
